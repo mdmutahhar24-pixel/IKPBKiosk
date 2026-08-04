@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Authors {
+  id String @id @default(uuid())
+  firstName String
+  lastName String
+
+  book Books []
+}
+
+enum Status{
+  AVAILABLE
+  CHECKED_OUT
+}
+
+
+model Books {
+  id String @id @default(uuid())
+  barcode String @unique
+  title String @unique
+  description String?
+  shelfLocation String
+  status Status @default(AVAILABLE)
+  AuthorId String
+  Genre String
+
+  author Authors @relation(fields: [AuthorId], references: [id], onDelete: Cascade)
+  Transaction Transaction []
+}
+
+model RegularUser {
+  id String @id @default(uuid())
+  barcode String @unique
+  firstName String
+  lastName String
+  active Boolean @default(true)
+  createdAt DateTime @default(now())
+
+  Transaction Transaction []
+}
+
+enum Action {
+  CHECKED_OUT
+  RETURNED
+}
+
+model Transaction {
+  id String @id @default(uuid())
+  bookTitle String
+  UserBarCode String
+  action Action
+  checkedOutAt DateTime @default(now())
+
+  book Books @relation(fields: [bookTitle], references: [title], onDelete: Cascade)
+  user RegularUser @relation(fields: [UserBarCode], references: [barcode], onDelete: Cascade)
+}
