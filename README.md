@@ -8,7 +8,8 @@ Hello! This is IKPB Kiosk, A Library Kiosk that helps organize books!
 I have a ton of books at home, and I sometimes let people borrow them. However, sometimes I can't keep track of them, so I design and coded this so that I could keep track of them.
 
 ## CAD
-<img width="504" height="446" alt="Screenshot 2026-08-03 215418" src="https://github.com/user-attachments/assets/b52eb752-8b5e-41a0-9938-61648026bbe9" />
+<img width="844" height="622" alt="image" src="https://github.com/user-attachments/assets/c1b460c6-00c2-47b8-9a01-8e7ddf847bb9" />
+
 
 Above is an image of my Casing on OnShape. If you want to inspect it closer, here is the link: https://cad.onshape.com/documents/945515c52102aeb44ca044f3/w/60ae706217bce83493eeb8b0/e/bd5497d9748fe9aab4e35a52?renderMode=0&uiState=6a71707db21ca79e95e4c34d
 
