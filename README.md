@@ -2,7 +2,7 @@
 
 Hello! This is IKPB Kiosk, A Library Kiosk that helps organize books!
 <br />
-**Note: No PCB in this design because everything automatically conncts without a PCB.**
+**Note: No PCB in this design because everything automatically conncts without a PCB. Also Don't mind my wiring diagram. That was the best option I had at the time.**
 
 ## Why make this?
 I have a ton of books at home, and I sometimes let people borrow them. However, sometimes I can't keep track of them, so I design and coded this so that I could keep track of them.
